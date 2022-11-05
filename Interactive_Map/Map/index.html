@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menubar.css">
+    <script src="text.js" defer></script>
+    <!-- /// -->
+    <link rel="shortcut icon" href="../Images/White_lotus_tile_icon.webp" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <section id="section1">
+        <video autoplay muted loop id="front-video">
+            <source src="../Images/videoplayback.mp4" type="video/mp4">
+        </video>
+
+        <div id="titel">
+            <h1>Avatar<br> interactive map</h1>
+        </div>
+
+        <a href="#section2" class="scroll-down-btn" onclick="removeFunction()"></a>
+
+    </section>
+
+    <section id="section2">
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+
+                <h1 class="menu__section">Water Tribe</h1><br>
+                <hr color="#ffdeb0">
+                <li><a class="menu__item" href="#Southern-Water-Tribe" onclick="SouthernWaterTribeFunction()">Southern
+                        Water Tribe</a></li>
+                <li><a class="menu__item" href="#Northern-Water-Tribe" onclick="NorthernWaterTribeFunction()">Northern Water Tribe</a></li>
+
+                <br><br>
+                <h1 class="menu__section">Earth Kingdom</h1><br>
+                <hr color="#ffdeb0">
+                <li><a class="menu__item" href="#Ba-Sing-Se" onclick="BaSingSeFunction()">Ba Sing Se</a></li>
+
+                <br><br>
+                <h1 class="menu__section">Fire Nation</h1><br>
+                <hr color="#ffdeb0">
+                <li><a class="menu__item" href="#The-Capital-City" onclick="TheCapitalCityFunction()">The Capital City</a></li>
+
+                <br><br>
+                <h1 class="menu__section">Air Nomads</h1><br>
+                <hr color="#ffdeb0">
+                <li><a class="menu__item" href="#Northern-Air-Temple" onclick="NorthernAirTempleFunction()">Northern Air Temple</a></li>
+                <li><a class="menu__item" href="#Eastern-Air-Temple" onclick="EasternAirTempleFunction()">Eastern Air Temple</a></li>
+                <li><a class="menu__item" href="#Southern-Air-Temple" onclick="SouthernAirTempleFunction()">Southern Air Temple</a></li>
+                <li><a class="menu__item" href="#Western-Air-Temple" onclick="WesternAirTempleFunction()">Western Air Temple</a></li>
+            </ul>
+        </div>
+
+
+        <div class="infobalk" id="infobalk">
+            <div id="close-info" onclick="closeFunction()">close</div>
+
+            <!-- Maak general classes aan en stijl die. vervolgens display: none; en display: block; met function onclick.
+            maak divs aan met die classes en geef die display none. style de divs. maak meerdere functions in js -->
+
+
+            <!-- water -->
+            <div class="titel Southern-Water-Tribe-info" id="Southern-Water-Tribe-info-id">Southern Water Tribe</div>
+            <div class="titel Northern-Water-Tribe-info" id="Northern-Water-Tribe-info-id">Northern Water Tribe</div>
+
+            <!-- earth -->
+            <div class="titel Ba-Sing-Se-info" id="Ba-Sing-Se-info-id">Ba Sing Se</div>
+
+            <!-- fire -->
+            <div class="titel The-Capital-City-info" id="The-Capital-City-info-id">The Capital City</div>
+
+            <!-- air -->
+            <div class="titel Northern-Air-Temple-info" id="Northern-Air-Temple-info-id">Northern Air Temple</div>
+            <div class="titel Eastern-Air-Temple-info" id="Eastern-Air-Temple-info-id">Eastern Air Temple</div>
+            <div class="titel Southern-Air-Temple-info" id="Southern-Air-Temple-info-id">Southern Air Temple</div>
+            <div class="titel Western-Air-Temple-info" id="Western-Air-Temple-info-id">Western Air Temple</div>
+
+
+        </div>
+
+
+        <div class="zoom_outer">
+
+            <div id="zoom"><img src="../Images/Map.jpg" alt="Map could not load." id="map-image">
+
+                <!-- water -->
+                <div class="location-btn white water" id="Southern-Water-Tribe" onclick="SouthernWaterTribeFunction()">
+                </div>
+                <div class="location-btn white water" id="Northern-Water-Tribe" onclick="NorthernWaterTribeFunction()">
+                </div>
+                <!-- earth -->
+                <div class="location-btn white earth" id="Ba-Sing-Se" onclick="BaSingSeFunction()"></div>
+                <!-- fire -->
+                <div class="location-btn white fire" id="The-Capital-City" onclick="TheCapitalCityFunction()">
+                </div>
+                <!-- air -->
+                <div class="location-btn white air" id="Northern-Air-Temple" onclick="NorthernAirTempleFunction()">
+                </div>
+                <div class="location-btn white air" id="Eastern-Air-Temple" onclick="EasternAirTempleFunction()">
+                </div>
+                <div class="location-btn white air" id="Southern-Air-Temple" onclick="SouthernAirTempleFunction()">
+                </div>
+                <div class="location-btn white air" id="Western-Air-Temple" onclick="WesternAirTempleFunction()">
+                </div>
+
+                <button onclick="callApi()" id="modal">lol</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
